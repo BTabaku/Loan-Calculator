@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+        integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+        crossorigin="anonymous"></script>
+
+        <!-- loading part bar -->
+        <style>
+            #loading,#results{
+                display: none;
+            }
+        </style>
+
+</head>
+
+<body>
+
+    <div class="" style="padding: 5%;">
+
+        <form style="align-content: center;" id="loan-form" class="">
+            <div class="parentdiv">
+
+            </div>
+            
+            <h2 class="" style="text-align: center;" class="heading">
+                Loan Calculator
+            </h2>
+            <div class="form-group">
+                <label for="loan-amount">Loan Ammount $</label>
+                <input type="number" class="form-control" id="loan-amount" aria-describedby="loan-amount"
+                    placeholder="Enter Loan Ammount">
+            </div>
+
+            <div class="form-group">
+                <label for="annualInterest">Annual interest %</label>
+                <input type="number" class="form-control" id="annual-interest" aria-describedby="annualInterest"
+                    placeholder="Enter Annual interest %">
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="exampleInputEmail1">Loan Ammount</label> -->
+                <label for="annualInterest">Years to Repay</label>
+                <input type="number" class="form-control" id="years-repay" aria-describedby="Years to repay"
+                    placeholder="Years to repay">
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-block" style="background-color: black;" id="submit">Calculate</button>
+        </form>
+        <!-- Loader here -->
+        <div id="loading" class="row-fluid" style="text-align: center; padding: 5%;">
+            <img src="img/loading.gif" alt="loading..." class="span12 pagination-centered" style="width: 150px;">
+        </div>
+        <!-- Loading image end -->
+
+        <div id="results">
+            <h4 class="" style="text-align: center; padding-top: 5%;">
+                Results
+            </h4>
+            <div class="form-group">
+                <label for="monthly-payment">Monthly Payment</label>
+                <input type="number" class="form-control" id="monthly-payment" disabled>
+            </div>
+    
+            <div class="form-group">
+                <label for="total-payment">Total Payment</label>
+                <input type="number" class="form-control" id="total-payment" disabled>
+            </div>
+    
+            <div class="form-group">
+                <label for="total-interest">Total Interest</label>
+                <input type="number" class="form-control" id="total-interest" disabled>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
